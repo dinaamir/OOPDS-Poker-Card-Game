@@ -13,3 +13,5 @@ Player class  -> containing the information about player's name
 Play class    -> main class, to play the game
 
 ** so far i have coded until the one where we need to get the values/points of each card to do totaling and comparison  
+
+** the code might have problem when we wanna call the getValue() method sebab the data type does not match. cuba consider using generic <E> for inHand where its original data type was Stack<Card>
