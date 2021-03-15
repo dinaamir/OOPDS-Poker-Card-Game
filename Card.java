@@ -1,35 +1,33 @@
 public class Card {
-    private int suit, face, rank;
-    private static int value;
-    private final static String[] suits = { "D", "C", "H", "S" };                   
-    private final static String[] faces = { "A", "2", "3", "4", "5", "6", "7",      
-                                            "8", "9", "10", "J", "Q", "K" };
-    private final static int[] ranks = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
-    private final static int[] values = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10};           
+    protected int suit, face, value;
+    protected final static String[] suits = { "C", "D", "H", "S" }; // The 4 suits of a deck; Diamonds, Clubs, Hearts & Spades
+    protected final static String[] faces = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" }; // The 13 faces of the cards, from Ace(smallest = 1)
+                                                                                                                  // to King(largest = 13)
+    protected final static int[] values = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10 };                       // The value assigned to a card of a rank
 
-    public Card() {}                                                               
+    Card() {
+    }
 
-    public Card(int suit, int face, int rank, int value) {                                    
+    public Card(int suit, int face, int value) {
         this.suit = suit;
         this.face = face;
-        this.rank = rank;
         this.value = value;
     }
-        public int getSuit() {
-            return suit;
-        }
-        public int getFace() {
-            return face;
-        }
-        public int getRank() {
-            return ranks[rank];
-        }
-        public static int getValue() {
-            return values[value];
-        }
-        @Override
-        public String toString() {
-            return suits[suit] + faces[face];
-        }
+
+    public int getSuit() {
+        return suit;
     }
-    
+
+    public int getFace() {
+        return face;
+    }
+
+    public int getValue() {
+        return values[value];
+    }
+
+    @Override
+    public String toString() {
+        return suits[suit] + faces[face];
+    }
+}
