@@ -4,16 +4,19 @@
 |    Class Clarification    |
 +---------------------------+
 
-Card class    -> containing the information about the cards (suits, faces ,ranks, values)
-Deck class    -> focuses on constructing a deck of playing cards
+1. Card class    -> containing the information about the cards (suits, faces ,ranks, values)
+
+2. Deck class    -> focuses on constructing a deck of playing cards
               -> method to create a card
               -> method to shuffle cards on deck
               -> method to deal/pop cards to deck
               -> method to remove 5 cards from deck
               -> method to remove 1 card from deck
               -> method to compare cards by suit then face
-Player class  -> containing the information about player's name
-Game class    -> main class, to play the game
+
+3. Player class  -> containing the information about player's name
+
+4. Game class    -> main class, to play the game
 
 +--------------------------+
 |    Majority Rule Game    |
